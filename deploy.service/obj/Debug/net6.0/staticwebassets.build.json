@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4GVVxS+RUGYq85Zbq+nqtk5mtsw8urSGqanWRFsW3/s=",
+  "Source": "deploy.service",
+  "BasePath": "_content/deploy.service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
