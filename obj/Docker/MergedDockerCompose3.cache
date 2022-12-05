@@ -1,0 +1,33 @@
+name: dockercompose17538960075529063138
+services:
+  deploy.service:
+    build:
+      context: C:\Users\huyth\OneDrive\MÃ¡y tÃ­nh\C#\deploy.service
+      dockerfile: deploy.service/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+    image: deployservice
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "3003"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\huyth\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\huyth\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose17538960075529063138_default

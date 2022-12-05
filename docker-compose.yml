@@ -1,9 +1,8 @@
 version: '3.4'
+
 services:
- catalog.api:
-    image: ${DOCKER_REGISTRY-}deploy
-    restart: always  
+  deploy.service:
+    image: ${DOCKER_REGISTRY-}deployservice
     build:
+      context: .
       dockerfile: deploy.service/Dockerfile
-    ports:
-      - "80:3002"
